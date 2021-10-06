@@ -7,20 +7,20 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  editorOptions = { 
-    theme: 'vs-dark', 
-    language: 'markdown' 
+  editorOptions = {
+    theme: 'vs-dark',
+    language: 'markdown'
   }
   markdown = `
-  # Level 1 
+  # Level 1 :smile:
   
   - number 1; 
     - number 2; 
-    
-  ## Level 2 
+     
+  ## Level 2 :clap:
   
   > Quotes 
-  
+   
   After quote. [Link](http://www.google.com)`;
 
   onReady() {

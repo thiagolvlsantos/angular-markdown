@@ -1,19 +1,23 @@
-<table style="width:100%; vertical-align: top;">
-  <tr>
-    <th style="width:50%">
-      Input (text)
-    </th>
-    <th style="width:50%">
-      Output (html)
-    </th>
-  </tr>
-  <tr>
-    <td style="heigth:100vh;">
-      <ngx-monaco-editor [options]="editorOptions" [(ngModel)]="markdown"></ngx-monaco-editor>
-    </td>
-    <td>
-      <markdown [data]="markdown" (ready)="onReady()" emoji></markdown>
-    </td>
-  </tr>
+<table class="table table-bordered table-striped table-sm">
+  <thead>
+    <tr>
+      <th style="width:50%">
+        Input (text in Markdown)
+      </th>
+      <th style="width:50%">
+        Output (HTML rendered)
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style="vertical-align: top;">
+      <td>
+        <ngx-monaco-editor style="height:100vh;" [options]="editorOptions" [(ngModel)]="markdown"></ngx-monaco-editor>
+      </td>
+      <td>
+        <markdown [data]="markdown" (ready)="onReady()" emoji></markdown>
+      </td>
+    </tr>
+  </tbody>
 </table>
 <router-outlet></router-outlet>
